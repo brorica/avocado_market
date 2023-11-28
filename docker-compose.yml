@@ -1,15 +1,5 @@
 version: '3'
 services:
-  # db:
-  #   image: mysql:8
-  #   container_name: avocado_db
-  #   restart: always
-  #   ports:
-  #     - "3306:3306"
-  #   env_file: ./backend/docker-backend.env
-  #   volumes:
-  #     - mysql_data:/var/lib/mysqla
-
    frontend:
      build: ./frontend
      ports:
@@ -18,28 +8,6 @@ services:
        - ./frontend:/app
        - /app/node_modules
 
-  # backend:
-  #   build: ./backend
-  #   ports:
-  #     - "8080:8080"
-  #   volumes:
-  #     - ./backend:/app
-
-  # redis:
-  #   image: redis:latest
-  #   ports:
-  #     - "8379:6379"
-        
-
-         # nginx:
-         #   image: nginx:latest
-         #   ports:
-         #     - "443:443"
-         #     - "80:80"
-         #   volumes:
-         #    - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-         #         - ./nginx.conf:/etc/nginx/nginx.conf
-         #         - ./certs:/etc/letsencrypt
 
 # 로컬 테스트 때 주석 해제
   # openvidu:
